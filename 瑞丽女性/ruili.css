@@ -898,7 +898,7 @@ body{
 
 /* 扩展一天气 */
 .weather{
-    width: 400px;
+    width: 420px;
     height: 30px;
     margin-left: 20px;
     background: rgba(215, 223, 239, 0.367);
@@ -915,11 +915,17 @@ body{
     margin: 3px 0;
     vertical-align: top;
 }
+.weather00{
+    display: inline-block;
+    width: 100px;
+    padding-left: 5px;
+}
 .weather a:hover{
     text-decoration: none;
 }
 .weather ul{
     display: none;
+    z-index: 2;
 }
 .weather ul a{
     color: black;

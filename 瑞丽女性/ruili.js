@@ -195,15 +195,18 @@ for(var i=0;i<images.length;i++){
 
 
 //扩展二-----引入json
-var ojson_test=$class(document,"json_test");
-console.log(ojson_test);
-var mtopmid_mid2=$class(document,"topmid_mid2");
-mtopmid_mid2.parentNode.removeChild(mtopmid_mid2);
-var mclear=$class(document,"clear");
-console.log(mclear);
 axios.get("ruili.json")
     .then(res=>{
         console.log(res.data);
+        var ojson_test=$class(document,"json_test");
+        console.log(ojson_test);
+        var mtopmid_mid2;
+        for(var i=0;i<4;i++){
+            mtopmid_mid2=$class(document,"topmid_mid2");
+            mtopmid_mid2.parentNode.removeChild(mtopmid_mid2);
+        }
+        var mclear=$class(document,"clear");
+        console.log(mclear);
         for(var i=0;i<res.data.length;i++){
             var otopmid_mid2=mtopmid_mid2.cloneNode(true);
             var oclear=mclear.cloneNode(true);
